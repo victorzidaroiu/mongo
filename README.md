@@ -1,5 +1,11 @@
-# mongo
-Demo app for working with mondodb using mongoose
+# MongoDB App
 
-### Run
-npm start
+This is a CLI app that demonstrates basic usage of mondodb using mongoose.
+
+## Install
+
+* ``` npm i ```
+
+## Run
+
+``` npm run dev ```
