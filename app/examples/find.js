@@ -1,10 +1,11 @@
 import mongoose from '../mongoose';
 import examples from './';
 
-export default (insertedDocument) => {
-  console.log(`${insertedDocument} was added.`);
-
+export default () => new Promise((resolve) => {
   const type = 'dog';
 
-  return mongoose.models.AnimalModel.find({ type });
-};
+  mongoose.models.AnimalModel.find({ type }).then((results) => {
+    console.log(`${type} found ${results.length} times using regular syntax.`);
+    resolve();
+  });
+});
